@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTBL Coin Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #game {
+            text-align: center;
+        }
+        #clickButton {
+            font-size: 24px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        #counter {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <div id="counter">Deine Münzen: 0.0000</div>
+        <button id="clickButton">Klick mich</button>
+    </div>
+    <script>
+        let count = 0.0000;
+        document.getElementById('clickButton').addEventListener('click', function() {
+            count += 0.0001;
+            document.getElementById('counter').innerText = `Deine Münzen: ${count.toFixed(4)}`;
+        });
+    </script>
+</body>
+</html>
